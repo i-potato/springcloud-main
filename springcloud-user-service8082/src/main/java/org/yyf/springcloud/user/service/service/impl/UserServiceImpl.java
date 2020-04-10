@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.yyf.springcloud.commons.config.BusinessException;
 import org.yyf.springcloud.user.service.dao.UserMapper;
 import org.yyf.springcloud.user.service.entity.User;
 import org.yyf.springcloud.user.service.service.UserService;
@@ -26,8 +27,12 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public User getById(String id) {
-		log.info(userMapper.get(id).toString());
-		return userMapper.get(id);
+		User user = userMapper.get(id);
+		if(user == null ) {
+			throw new BusinessException(1, "用户不存在");
+		}
+		log.info(user.toString());
+		return user;
 	}
 
 	@Override

@@ -69,7 +69,9 @@
 	</build>
 	
 	<modules>
+		
 		<module>springcloud-eureka</module>
+		<module>springcloud-user-client</module>
 		<module>springcloud-user-service8081</module>
 		<module>springcloud-user-service8082</module>
 		<module>springcloud-commons</module>
