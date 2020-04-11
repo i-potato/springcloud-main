@@ -17,7 +17,8 @@
 - springboot: 2.2.2.RELEASE
 - ORM: mybatis1.3.2
 - 数据库: mysql5.0
-- 开发工具：sts3.8(spring版eclipse)、navicat premium、git、postman、sublime text
+- 开发工具: sts3.8(spring版eclipse)、navicat premium、git、postman、sublime text
+- 编码: utf-8
 
 ## 项目架构
 
@@ -42,6 +43,6 @@
 
 ## 说明
 - 配置中心git地址：https://github.com/i-potato/springcloud-config 
-- 数据库sql文件在sql目录下
+- 数据库sql文件在sql目录下,需提前创建yyf-springcloud数据库
 - 80网关仅配置了两个路径：http://localhost/user/lb  、 http://localhost/user/get/1
 - 因时间原因尚未完成web层html页面、因环境原因未使用redis缓存，请见谅
