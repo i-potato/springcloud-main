@@ -46,4 +46,6 @@
 - 配置中心git地址：https://github.com/i-potato/springcloud-config 
 - 数据库sql文件在sql目录下,需提前创建yyf-springcloud数据库
 - 80网关仅配置了两个路径：http://localhost/user/lb  、 http://localhost/user/get/1
+- 因使用了JWT验证，部分接口需要登录获取Authorization
 - 因时间原因尚未完成web层html页面、因环境原因未使用redis缓存，请见谅
+
