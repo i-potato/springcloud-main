@@ -8,10 +8,12 @@ public interface UserService {
 	
 	void insert(User user);
 	
-	User getById(String id);
+	User getById(String id,String auth);
 	
 	List<User> list();
 	
 	void update(User user);
+	
+	String login(User user);
 	
 }

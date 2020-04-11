@@ -21,4 +21,7 @@ public interface UserMapper {
 	
 	@Select("select * from user")
 	List<User> list();
+	
+	@Select("select * from user where user_name = #{userName} and user_password = #{userPassword}")
+	User login(User user);
 }
