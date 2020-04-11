@@ -10,6 +10,7 @@
 - 服务网关：gatway
 - 负载均衡：ribbon
 - 服务间调用：openFeign
+- ORM: mybatis
 
 ## 开发环境
 - jdk: 8.0
