@@ -26,22 +26,10 @@
 	
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions><!-- 去掉springboot默认配置 -->  
-		        <exclusion>  
-		            <groupId>org.springframework.boot</groupId>  
-		            <artifactId>spring-boot-starter-logging</artifactId>  
-		        </exclusion>  
-		    </exclusions>  
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <scope>provided</scope>
 		</dependency>
-		
-		
-		<dependency>
-		    <groupId>org.projectlombok</groupId>
-		    <artifactId>lombok</artifactId>
-		</dependency>
-		
 	</dependencies>
 	
 	
@@ -70,7 +58,7 @@
 	
 	<modules>
 		
-		
+		<module>springcloud-gateway</module>
 		<module>springcloud-user-client</module>
 		<module>springcloud-user-service8081</module>
 		<module>springcloud-user-service8082</module>
