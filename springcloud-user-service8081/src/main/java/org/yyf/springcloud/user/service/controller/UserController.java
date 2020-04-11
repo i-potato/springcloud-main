@@ -40,6 +40,7 @@ public class UserController {
 	@RequestMapping(value = "get/{id}" , method = RequestMethod.GET)
 	public ResponseMap<User> get(@PathVariable String id,HttpServletRequest request){
 		
+		//验证应使用拦截器来实现，这里只做演示
 		String auth = request.getHeader("Authorization");
 		
 		User user = new User();
@@ -67,7 +68,11 @@ public class UserController {
 	}
 	
 	
-	
+	/**
+	 * 登录获取Authorization
+	 * @param user
+	 * @return
+	 */
 	@PostMapping("login")
 	public ResponseMap<String> login(@RequestBody User user){
 		String auth = "";

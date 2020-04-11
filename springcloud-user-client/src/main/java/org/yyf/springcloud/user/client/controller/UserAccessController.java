@@ -33,7 +33,7 @@ public class UserAccessController {
 		
 		//@TODO
 		
-		//调用user-service中的接口 需要Authorization
+		//调用user-service中的接口 需要登录获取Authorization
 		return userAcessService.get(id);
 	}
 	
