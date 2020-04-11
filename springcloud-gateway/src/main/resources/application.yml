@@ -1,5 +1,5 @@
 server:
-  port: 7000
+  port: 80
   servlet:
     session:
       timeout: 30
@@ -14,11 +14,11 @@ spring:
     gateway:
       routes:
       - id: user-server1
-        uri: http://localhost:8081
+        uri: http://localhost:8080
         predicates:
           - Path=/user/**
       - id: user-server2
-        uri: http://localhost:8081
+        uri: http://localhost:8080
         predicates:
           - Path=/user/lb
 

@@ -30,7 +30,7 @@ public class UserAccessController {
 	
 	/**
 	 * 负载均衡测试 
-	 * 请访问http://localhost:8080/user/lb
+	 * 请访问http://localhost:8080/user/lb或者通过网关http://localhost/user/lb
 	 * @return
 	 */
 	@GetMapping("lb")
