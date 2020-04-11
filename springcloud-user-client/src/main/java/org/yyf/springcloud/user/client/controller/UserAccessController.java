@@ -23,20 +23,17 @@ public class UserAccessController {
 	@Autowired
 	UserAccessService userAcessService;
 	
-	@Autowired
-	RequestTemplate requestTemplate;
-	
 	/**
 	 * 访问userAcessService中的接口即可调用对应服务的接口
 	 * @param id
 	 * @return
 	 */
-	@RequestMapping(value = "{id}" , method = RequestMethod.GET)
+	@RequestMapping(value = "/get/{id}" , method = RequestMethod.GET)
 	public ResponseMap<User> get(@PathVariable String id,HttpServletResponse response,HttpServletRequest request){
 		
 		//@TODO
 		
-		//调用user-service中的接口 需要授权
+		//调用user-service中的接口 需要Authorization
 		return userAcessService.get(id);
 	}
 	

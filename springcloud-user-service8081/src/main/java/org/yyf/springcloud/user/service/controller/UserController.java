@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.yyf.springcloud.commons.config.BusinessException;
 import org.yyf.springcloud.commons.config.ResponseMap;
+import org.yyf.springcloud.commons.jwt.JwtObjectUtil;
 import org.yyf.springcloud.user.service.entity.User;
 import org.yyf.springcloud.user.service.service.UserService;
 
@@ -36,7 +37,7 @@ public class UserController {
 	 * @param id
 	 * @return
 	 */
-	@RequestMapping(value = "{id}" , method = RequestMethod.GET)
+	@RequestMapping(value = "get/{id}" , method = RequestMethod.GET)
 	public ResponseMap<User> get(@PathVariable String id,HttpServletRequest request){
 		
 		String auth = request.getHeader("Authorization");
@@ -68,7 +69,7 @@ public class UserController {
 	
 	
 	@PostMapping("login")
-	public ResponseMap<String> getAuth(@RequestBody User user){
+	public ResponseMap<String> login(@RequestBody User user){
 		String auth = "";
 		try {
 			auth = userService.login(user);
@@ -80,6 +81,36 @@ public class UserController {
 			return new ResponseMap<>(1,"系统错误");
 		}
 		return new ResponseMap<>(auth);
+	}
+	
+	/**
+	 * auth验证
+	 * @return
+	 */
+//	@GetMapping("auth/{auth}")
+	@RequestMapping(value = "auth/{auth}" , method = RequestMethod.GET)
+	public ResponseMap<Void> auth(@PathVariable String auth){
+		
+		
+		log.info("hi");
+		
+		if(StringUtils.isEmpty(auth)) {
+			return new ResponseMap<>(1,"验证失败");
+		}
+		
+		User user =  JwtObjectUtil.unSign(auth, User.class);
+		
+		try {
+			if(StringUtils.isEmpty(userService.login(user))) {
+				return new ResponseMap<>(1,"验证失败");
+			}else {
+				return new ResponseMap<>();
+			}
+		} catch (Exception e) {
+			return new ResponseMap<>(1,"验证失败");
+		}
+		
+		
 	}
 	
 	

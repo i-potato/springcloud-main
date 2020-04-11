@@ -1,9 +1,9 @@
 spring:
   application:
-    name: springcloud-user-service
+    name: springcloud-news
   cloud:
     config:
       label: master
-      name: application
+      name: config-news
       profile: dev
       uri: http://localhost:10000

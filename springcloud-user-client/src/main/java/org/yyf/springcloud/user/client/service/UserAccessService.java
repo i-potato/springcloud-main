@@ -20,7 +20,7 @@ public interface UserAccessService {
 	 * @param id
 	 * @return
 	 */
-	@RequestMapping(value = "user/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "user/get/{id}", method = RequestMethod.GET)
 	ResponseMap<User> get(@PathVariable("id") String id);
 	
 	

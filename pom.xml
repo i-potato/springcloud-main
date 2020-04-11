@@ -58,10 +58,11 @@
 	
 	<modules>
 		
-		<module>springcloud-gateway</module>
+		<module>springcloud-news</module>
 		<module>springcloud-user-client</module>
 		<module>springcloud-user-service8081</module>
 		<module>springcloud-user-service8082</module>
+		<module>springcloud-gateway</module>
 		<module>springcloud-config-center</module>
 		<module>springcloud-eureka</module>
 		<module>springcloud-commons</module>
