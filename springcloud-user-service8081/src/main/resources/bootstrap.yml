@@ -1,0 +1,9 @@
+spring: 
+  application:
+    name: springcloud-user-service
+  cloud:
+    config:
+      label: master
+      name: application
+      profile: dev
+      uri: http://localhost:10000

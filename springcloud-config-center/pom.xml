@@ -7,37 +7,26 @@
     <artifactId>main</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>springcloud-user-service8081</artifactId>
+  <artifactId>springcloud-config-center</artifactId>
   <packaging>jar</packaging>
-  <name>springcloud-user-service8081</name>
+  <name>springcloud-config-center</name>
   
   
   <dependencies>
-  
-  	<dependency>
-  		<groupId>org.yyf.springcloud</groupId>
-    	<artifactId>springcloud-commons</artifactId>
-    	<version>${project.version}</version>
-  	</dependency>
   	
   	<!-- eureka-client -->
   	<dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
     </dependency>
-
-	<!-- config client -->
-	<dependency>
-		<groupId>org.springframework.cloud</groupId>
-		<artifactId>spring-cloud-starter-config</artifactId>
+  
+  	<dependency>
+	    <groupId>org.springframework.cloud</groupId>
+	    <artifactId>spring-cloud-config-server</artifactId>
 	</dependency>
-
-
-  	
+    
   </dependencies>
-  
-  
   <build>
-    <finalName>springcloud-user-service8081</finalName>
+    <finalName>springcloud-config-center</finalName>
   </build>
 </project>
