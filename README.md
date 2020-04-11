@@ -22,10 +22,15 @@
 ## 项目架构
 
 |文件目录|说明|
+|:-:|:-:|
 | springcloud-commons| 项目公共jar包|
 | springcloud-eureka   |服务注册与发现|
 | springcloud-config-center|配置中心|
 | springcloud-gateway|网关|
-| springcloud-user-service8081|用户模块demo|
-| springcloud-user-service8082|用户模块demo|
+| springcloud-user-service8081|简单的用户模块demo，服务端|
+| springcloud-user-service8082|与8081为镜像，用于测试负载均衡|
+| springcloud-user-client|简单的用户客户端|
+| springcloud-news|简单的新闻客户端|
+
+
 
