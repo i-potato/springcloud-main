@@ -17,7 +17,7 @@
 - springcloud: Hoxton.SR1  
 - springboot: 2.2.2.RELEASE
 - ORM: mybatis1.3.2
-- 数据库: mysql5.0
+- 数据库: mysql5.6
 - 开发工具: sts3.8(spring版eclipse)、navicat premium、git、postman、sublime text
 - 编码: utf-8
 
