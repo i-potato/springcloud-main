@@ -30,7 +30,7 @@
 | springcloud-config-center|配置中心|10000|http://localhost:10000/application-dev.yml |
 | springcloud-gateway|网关|80|http://localhost/user/lb |
 | springcloud-user-service8081|简单的用户模块demo，服务端|8081|http://localhost:8081/user/get/1 |
-| springcloud-user-service8082|与8081为镜像，用于测试负载均衡|8082|http://localhost:8082/user/get/1|
+| springcloud-user-service8082|与8081为镜像，修改8081端口为8082启动即可，用于测试负载均衡|8082|http://localhost:8082/user/get/1|
 | springcloud-user-client|简单的用户客户端|8080|http://localhost:8080/user/get/1|
 | springcloud-news|简单的新闻客户端|8083|http://localhost:8083/news/list |
 |sql|sql文件存放地址|无|无|
