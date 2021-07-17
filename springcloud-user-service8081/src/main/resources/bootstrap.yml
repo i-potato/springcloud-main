@@ -6,4 +6,4 @@ spring:
       label: master
       name: application
       profile: dev
-      uri: http://localhost:10000
+      uri: http://localhost:10001

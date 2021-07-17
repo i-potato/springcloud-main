@@ -4,6 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.yyf.springcloud.commons.config.ResponseMap;
@@ -29,6 +30,7 @@ public interface UserAccessService {
 	 * 请访问http://localhost:8080/user/lb
 	 * @return
 	 */
+//	@PostMapping
 	@GetMapping("user/lb")
 	String lb();
 	

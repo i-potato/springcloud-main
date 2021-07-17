@@ -18,14 +18,15 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions><!-- 去掉springboot默认配置 -->
+			<!-- <exclusions>去掉springboot默认配置
 				<exclusion>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-logging</artifactId>
 				</exclusion>
-			</exclusions>
+			</exclusions> -->
 
 		</dependency>
+		
 		<!-- eureka-client -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
